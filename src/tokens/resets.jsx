@@ -1,4 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
+import { Font } from './fonts';
+import { Color } from './colors';
 
 const GlobalResets = createGlobalStyle`
   * {
@@ -15,8 +17,10 @@ const GlobalResets = createGlobalStyle`
   }
 
   body {
-    font-family: Arial, sans-serif;
-    background-color: #363636;
+    font-family: ${Font.COMMISSIONER};
+    font-weight: 400;
+    font-style: normal;
+    background-color: ${Color.GRAY_50};
   }
 
   button,

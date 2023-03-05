@@ -1,4 +1,6 @@
 import styled, { css } from 'styled-components';
+import { Color } from '../tokens/colors';
+import { Radius } from '../tokens/radiuses';
 
 const ButtonSize = {
   MEDIUM: 'medium',
@@ -27,7 +29,7 @@ const ButtonSizeToCSS = {
 const ButtonVariantToCSS = {
   [ButtonVariant.FILLED]: css`
     border-color: transparent;
-    color: #ffffff;
+    color: ${Color.WHITE};
     background-color: var(--color-button);
   `,
   [ButtonVariant.OUTLINED]: css`
@@ -39,35 +41,35 @@ const ButtonVariantToCSS = {
 
 const ButtonColorToCSS = {
   [ButtonColor.ORANGE]: css`
-    --color-button: #ff833e;
+    --color-button: ${Color.ORANGE_30};
 
     &:hover,
     &:focus {
-      --color-button: #ff9f69;
+      --color-button: ${Color.ORANGE_20};
     }
 
     &:active {
-      --color-button: #f06314;
+      --color-button: ${Color.ORANGE_40};
     }
 
     &:disabled {
-      --color-button: #adadad;
+      --color-button: ${Color.GRAY_30};
     }
   `,
   [ButtonColor.GREEN]: css`
-    --color-button: #5fcb45;
+    --color-button: ${Color.GREEN_30};
 
     &:hover,
     &:focus {
-      --color-button: #86da71;
+      --color-button: ${Color.GREEN_20};
     }
 
     &:active {
-      --color-button: #42b026;
+      --color-button: ${Color.GREEN_40};
     }
 
     &:disabled {
-      --color-button: #adadad;
+      --color-button: ${Color.GRAY_30};
     }
   `
 };
@@ -84,7 +86,7 @@ const StyledButton = styled.button.attrs(({ type, size, variant, color }) => ({
 
   border-width: 1px;
   border-style: solid;
-  border-radius: 4px;
+  border-radius: ${Radius[4]};
   font-size: 16px;
   line-height: 22px;
   cursor: pointer;
