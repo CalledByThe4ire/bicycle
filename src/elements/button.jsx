@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Color } from '../tokens/colors';
-import { Radius } from '../tokens/radiuses';
+import { Radius } from '../tokens/radii';
 
 const ButtonSize = {
   MEDIUM: 'medium',
