@@ -5,6 +5,7 @@ import { GlobalShadows } from './tokens/shadows';
 import { GlobalRadii } from './tokens/radii';
 import { IconName, SpriteWithIcons } from './tokens/icons';
 import { IconButton } from './elements/icon-button';
+import { Toggle } from './elements/toggle';
 
 import { TypographyVariant, Typography } from './elements/typography';
 
@@ -33,6 +34,8 @@ function App() {
       <Typography as='h1' variant={TypographyVariant.TITLE_1} color={Color.ORANGE_30}>
         Магазин велосипедов «Велик»
       </Typography>
+
+      <Toggle label='Тоггл' />
     </>
   );
 }
