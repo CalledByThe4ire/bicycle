@@ -6,6 +6,9 @@ import { GlobalRadii } from './tokens/radii';
 import { IconName, SpriteWithIcons } from './tokens/icons';
 import { IconButton } from './elements/icon-button';
 import { Toggle } from './elements/toggle';
+import { Input } from './elements/input';
+import { Select } from './elements/select';
+import { Filter } from './elements/filter';
 
 import { TypographyVariant, Typography } from './elements/typography';
 
@@ -35,7 +38,20 @@ function App() {
         Магазин велосипедов «Велик»
       </Typography>
 
-      <Toggle label='Тоггл' />
+      {/* <Toggle label='Тоггл' /> */}
+      <Input />
+
+      <Select label='Категория товаров'>
+        <option>Оправы</option>
+        <option>Линзы</option>
+        <option>Очки</option>
+      </Select>
+
+      <Filter label='Категория товаров'>
+        <option>Оправы</option>
+        <option>Линзы</option>
+        <option>Очки</option>
+      </Filter>
     </>
   );
 }
