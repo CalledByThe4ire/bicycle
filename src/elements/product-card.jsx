@@ -1,13 +1,12 @@
-import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 import { Color } from '../tokens/colors';
-import { Shadow } from '../tokens/shadows';
 import { Radius } from '../tokens/radii';
 import { IconName } from '../tokens/icons';
 import { Icon } from './icon';
 import { IconButton } from './icon-button';
 import { ButtonVariant, Button } from './button';
 import { TypographyVariant, Typography } from './typography';
+import { BaseCard } from './helpers/base-card';
 
 const StyledProductCard = styled.article`
   position: relative;
@@ -117,28 +116,7 @@ const UNAVAILABLE_CSS = css`
   }
 `;
 
-const StyledWrapper = styled(Link)`
-  position: relative;
-  display: grid;
-  border-radius: ${Radius[4]};
-  background-color: ${Color.GRAY_40};
-  overflow: hidden;
-
-  &:hover,
-  &:focus {
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: ${Radius[4]};
-      box-shadow: ${Shadow.CARD_DEFAULT_HOVER_OR_FOCUS_ADULT};
-      pointer-events: none;
-    }
-  }
-
+const StyledWrapper = styled(BaseCard)`
   ${({ unavailable }) => unavailable && UNAVAILABLE_CSS}
 `;
 

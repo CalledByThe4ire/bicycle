@@ -1,35 +1,13 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import declint from 'declint-ru';
 
 import { Color } from '../tokens/colors';
-import { Shadow } from '../tokens/shadows';
 import { Radius } from '../tokens/radii';
 import { TypographyVariant, Typography } from './typography';
+import { BaseCard } from './helpers/base-card';
 
-const StyledWrapper = styled(Link)`
-  position: relative;
-  display: flex;
-  width: 100%;
+const StyledWrapper = styled(BaseCard)`
   height: 140px;
-  border-radius: ${Radius[4]};
-  background-color: ${Color.GRAY_40};
-  overflow: hidden;
-
-  &:hover,
-  &:focus {
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: ${Radius[4]};
-      box-shadow: ${Shadow.CARD_DEFAULT_HOVER_OR_FOCUS_ADULT};
-      pointer-events: none;
-    }
-  }
 
   @media (min-width: 768px) {
     height: 100px;
