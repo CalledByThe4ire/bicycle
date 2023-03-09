@@ -1,8 +1,9 @@
-import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import styled, { css } from 'styled-components';
 import { BaseButton } from './helpers/base-button';
 import { Color } from '../tokens/colors';
 
-const StyledIconButton = styled(BaseButton)`
+const CSS = css`
   display: inline-flex;
   color: ${Color.ORANGE_30};
 
@@ -24,4 +25,12 @@ const StyledIconButton = styled(BaseButton)`
   }
 `;
 
-export { StyledIconButton as IconButton };
+const StyledIconButton = styled(BaseButton)`
+  ${CSS}
+`;
+
+const StyledIconLink = styled(Link)`
+  ${CSS}
+`;
+
+export { StyledIconButton as IconButton, StyledIconLink as IconLink };
