@@ -26,7 +26,7 @@ const StyledWrapper = styled(Link)`
       width: 100%;
       height: 100%;
       border-radius: ${Radius[4]};
-      box-shadow: ${Shadow.CARD_HOVER_OR_FOCUS_ADULT};
+      box-shadow: ${Shadow.CARD_DEFAULT_HOVER_OR_FOCUS_ADULT};
       pointer-events: none;
     }
   }
